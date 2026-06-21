@@ -1,0 +1,106 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.login-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-box {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+.login-box h2 { color: #d4af37; margin-bottom: 20px; }
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #141414;
+  color: #fff;
+}
+.login-box button, .btn-outline, .tab-btn, .add-form button, .content-form button {
+  background: linear-gradient(135deg, #d4af37, #e8c766);
+  color: #0a0a0a;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.error-text { color: #ff6b6b; margin-top: 10px; font-size: 0.85rem; }
+.success-text { color: #6bff95; margin-top: 10px; font-size: 0.85rem; }
+
+.dashboard { padding: 16px; max-width: 800px; margin: 0 auto; }
+.admin-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+}
+
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab-btn {
+  background: #1a1a1a;
+  color: #fff;
+  opacity: 0.6;
+}
+.tab-btn.active { opacity: 1; background: linear-gradient(135deg, #d4af37, #e8c766); color: #0a0a0a; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.list-item {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.list-item .info { flex: 1; }
+.list-item button {
+  background: #2a2a2a;
+  color: #ff8787;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; }
+.badge.confirmed { background: rgba(107,255,149,0.15); color: #6bff95; }
+.badge.cancelled { background: rgba(255,107,107,0.15); color: #ff6b6b; }
+
+.add-form, .content-form {
+  background: #141414;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-form input, .content-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+}
+.content-form label { font-size: 0.8rem; color: #d4af37; margin-top: 6px; }

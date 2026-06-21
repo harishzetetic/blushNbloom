@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blush & Bloom By Vishakha | Beauty Studio - Raj Nagar Extension</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">B&amp;B <span>Blush & Bloom</span></div>
+  <button class="book-btn nav-book" onclick="openBooking()">Book Appointment</button>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <img src="/img/hero.png" alt="Beauty studio" class="hero-img" id="heroImg">
+  <div class="hero-content">
+    <h1 id="heroTitle">Blush & Bloom By Vishakha</h1>
+    <p id="heroSubtitle">Mehndi Art • Nail Art • Makeup • Threading • Waxing</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="openBooking()">Book an Appointment</button>
+      <a href="#contact" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid" id="servicesGrid">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-track" id="testimonialTrack">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<section class="feedback" id="feedback">
+  <h2>Send Us Feedback</h2>
+  <form id="feedbackForm" class="feedback-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="message" placeholder="Your feedback / suggestion" required>
+    <button type="submit" class="btn-primary">Submit</button>
+  </form>
+  <p class="feedback-note" id="feedbackNote"></p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Visit / Reach Us</h2>
+  <div class="contact-card">
+    <p id="contactAddress">B-601, Nilaya Greens, Raj Nagar Extension, Ghaziabad</p>
+    <p id="contactPhone">📞 +91-9711195889</p>
+    <p id="contactEmail"></p>
+    <div class="contact-actions">
+      <button class="btn-primary" onclick="openBooking()">Book an Appointment</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Blush & Bloom By Vishakha. All rights reserved.</p>
+</footer>
+
+<!-- Booking Modal -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeBooking()">&times;</button>
+    <h2>Book an Appointment</h2>
+
+    <div class="step" id="stepDate">
+      <p class="step-label">1. Choose a date</p>
+      <div class="date-picker" id="datePicker"></div>
+    </div>
+
+    <div class="step" id="stepSlot" style="display:none;">
+      <p class="step-label">2. Choose a time slot</p>
+      <div class="slot-picker" id="slotPicker"></div>
+    </div>
+
+    <div class="step" id="stepForm" style="display:none;">
+      <p class="step-label">3. Your details</p>
+      <form id="bookingForm" class="feedback-form">
+        <input type="text" id="bf_name" placeholder="Full Name" required>
+        <input type="text" id="bf_flat" placeholder="Flat No. (e.g. B-601)" required>
+        <input type="email" id="bf_email" placeholder="Email" required>
+        <input type="tel" id="bf_mobile" placeholder="Mobile (optional)">
+        <textarea id="bf_pref" placeholder="Preference / Notes (e.g. bridal mehndi, gel nails)"></textarea>
+        <div class="selected-summary" id="selectedSummary"></div>
+        <button type="submit" class="btn-primary full-width">Confirm Booking</button>
+      </form>
+    </div>
+
+    <div class="step" id="stepSuccess" style="display:none;">
+      <div class="success-icon">✓</div>
+      <h3>Booking Confirmed!</h3>
+      <p>A confirmation email has been sent to you. We look forward to seeing you!</p>
+      <button class="btn-primary" onclick="closeBooking()">Done</button>
+    </div>
+
+    <p class="modal-error" id="modalError"></p>
+  </div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
